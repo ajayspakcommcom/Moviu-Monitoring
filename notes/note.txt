@@ -22,6 +22,9 @@ npm i prom-client
 2. Setup Grafana
     docker run -d -p 3000:3000 --name=grafana grafana/grafana-oss
 
+3. Setup Loki Server
+    docker run -d --name=loki -p 3100:3100 grafana/loki
+
 
     ajay@spakcomm.com
     Spak@12345
