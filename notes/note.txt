@@ -1,3 +1,29 @@
 npm i prom-client
 
-docker compose up
+1. Prometheus Server
+    Create a prometheus-config.yml file and copy the following configration. Don't forget to replace <NDOEJS_SERVER_ADDRESS> with actual value.
+    see the file code 
+
+    Start the Prometheus Server using docker compose
+    docker compose up
+    version: "3"
+
+    services:
+        prom-server:
+            image: prom/prometheus
+            ports:
+            - 9090:9090
+            volumes:
+            - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+            Great, The prometheus server is now up and running at PORT 9090
+
+
+2. Setup Grafana
+    docker run -d -p 3000:3000 --name=grafana grafana/grafana-oss
+
+
+    ajay@spakcomm.com
+    Spak@12345
+    11159
+
